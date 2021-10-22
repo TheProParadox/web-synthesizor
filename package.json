@@ -1,0 +1,24 @@
+{
+  "name": "web_synth",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Differentunic",
+  "license": "",
+  "description": "Only required to recompile css",
+  "dependencies": {
+    "@spectrum-css/dial": "^1.0.3",
+    "@spectrum-css/page": "^3.0.2",
+    "@spectrum-css/typography": "^3.0.2",
+    "@spectrum-css/vars": "^3.0.2",
+    "postcss": "^8.2.14"
+  },
+  "devDependencies": {
+    "postcss-cli": "^8.3.1",
+    "cssnano": "^5.0.2",
+    "postcss-dropunusedvars": "^1.2.0",
+    "postcss-import": "^14.0.1",
+    "postcss-varfallback": "^1.1.0"
+  }
+}

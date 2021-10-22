@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="spectrum spectrum--medium spectrum--dark" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Web Synth</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <!-- Spectrum CSS -->
+  <link href="css/dist/index.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/wave-shapes.css" rel="stylesheet">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <!--link rel="manifest" href="site.webmanifest"-->
+  <!--link rel="apple-touch-icon" href="icon.png"-->
+  <!-- Place favicon.ico in the root directory -->
+
+  <meta name="theme-color" content="#323232">
+
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <div class="d-flex">
+    <div class="d-block">
+      <div id="dial_a1" class="spectrum-Dial">
+        <div class="spectrum-Dial-controls">
+          <div class="spectrum-Dial-handle" tabindex="0">
+            <input type="range" class="spectrum-Dial-input" min="0" max="100" value="0">
+          </div>
+        </div>
+        <div class="spectrum-Dial-labelContainer">
+          <div class="spectrum-Dial-label dial-label-custom">
+            <label class="spectrum-Dial-label">A</label>
+          </div>
+        </div>
+      </div>
+      <div  id="dial_d1" class="spectrum-Dial">
+        <div class="spectrum-Dial-controls">
+          <div class="spectrum-Dial-handle" tabindex="0">
+            <input type="range" class="spectrum-Dial-input" min="0" max="100" value="0">
+          </div>
+        </div>
+        <div class="spectrum-Dial-labelContainer">
+          <div class="spectrum-Dial-label dial-label-custom">
+            <label class="spectrum-Dial-label">D</label>
+          </div>
+        </div>
+      </div>
+      <div id="dial_s1" class="spectrum-Dial">
+        <div class="spectrum-Dial-controls">
+          <div class="spectrum-Dial-handle" tabindex="0">
+            <input type="range" class="spectrum-Dial-input" min="0" max="100" value="0">
+          </div>
+        </div>
+        <div class="spectrum-Dial-labelContainer">
+          <div class="spectrum-Dial-label dial-label-custom">
+            <label class="spectrum-Dial-label">S</label>
+          </div>
+        </div>
+      </div>
+      <div id="dial_r1" class="spectrum-Dial">
+        <div class="spectrum-Dial-controls">
+          <div class="spectrum-Dial-handle" tabindex="0">
+            <input type="range" class="spectrum-Dial-input" min="0" max="100" value="0">
+          </div>
+        </div>
+        <div class="spectrum-Dial-labelContainer">
+          <div class="spectrum-Dial-label dial-label-custom">
+            <label class="spectrum-Dial-label">R</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex flex-column">
+    <div class="d-flex pb-xxl-1">
+      <p class="spectrum-Heading spectrum-Heading--sizeL spectrum-Heading--light">Oscillators</p>
+    </div>
+    <div class="d-flex">
+      <div class="d-flex">
+        <button id="osc1_btn" type="button" class="btn-custom"">1</button>
+      </div>
+      <div class="d-flex flex-column justify-content-between">
+        <div class="d-flex">
+          <span id="osc1_sine" class="indicator-off"></span>
+          <span class="wave-sine"></span>
+          <span class="indicator-spacing"></span>
+          <span id="osc1_triangle" class="indicator-off"></span>
+          <span class="wave-triangle"></span>
+        </div>
+        <div class="d-flex">
+          <span id="osc1_saw" class="indicator-off"></span>
+          <span class="wave-saw"></span>
+          <span class="indicator-spacing"></span>
+          <span id="osc1_square" class="indicator-off"></span>
+          <span class="wave-square"></span>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex pt-xxl-5">
+      <div class="d-flex">
+        <button id="osc2_btn" type="button" class="btn-custom"">2</button>
+      </div>
+      <div class="d-flex flex-column justify-content-between">
+        <div class="d-flex">
+          <span id="osc2_sine" class="indicator-off"></span>
+          <span class="wave-sine"></span>
+          <span class="indicator-spacing"></span>
+          <span id="osc2_triangle" class="indicator-off"></span>
+          <span class="wave-triangle"></span>
+        </div>
+        <div class="d-flex">
+          <span id="osc2_saw" class="indicator-off"></span>
+          <span class="wave-saw"></span>
+          <span class="indicator-spacing"></span>
+          <span id="osc2_square" class="indicator-off"></span>
+          <span class="wave-square"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="audio-init">
+    <p>Click To Start Audio</p>
+  </div>
+
+  <div id="keyboard" class="d-flex justify-content-around position-absolute bottom-0 start-50 translate-middle-x"></div>
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <!-- p5 scripts here -->
+  <script src="js/libs/p5.js"></script>
+  <script src="js/libs/addons/p5.sound.js"></script>
+
+  <script src="js/synth/dial.js"></script>
+  <script src="js/synth/osc.js"></script>
+  <script src="js/synth/wave-selector.js"></script>
+  <script src="js/libs/qwerty-hancock.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+# Useful .gitignore templates: https://github.com/github/gitignore
+doc
+img
+node_modules
+.editorconfig
+.htaccess
+browserconfig.xml
+favicon.ico
+humans.txt
+icon.png
+package-lock.json
+
+robots.txt
+site.webmanifest
+synth1-113.png
+tile.png
+tile-wide.png
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
