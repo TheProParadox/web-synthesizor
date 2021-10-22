@@ -1,6 +1,3 @@
-# web_synth
+Piano using website
 
-### JS Libraries
-
-- p5js
-- Qwerty Hancock
+Made by Bhavik with lub <3
